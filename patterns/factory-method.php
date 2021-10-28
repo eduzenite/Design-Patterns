@@ -17,8 +17,8 @@ class Car{
 
 //PT: Criando a fábrica do carro
 //EN: Creating the car factory
-class CarFactory{
-    public static function create($brand, $model){
+class VehiclesFactory{
+    public static function create_car($brand, $model){
         return new Car($brand, $model);
     }
 }
@@ -26,14 +26,20 @@ class CarFactory{
 //PT: Definindo especificações dos carros que serão criados
 //EN: Defining specifications of the cars that will be created
 $projects = [
-    ["GM", "Onix"],
-    ["Fiat", "Bravo"]
+    ["Chevrolet", "Corsa"],
+    ["Chevrolet", "Onix"],
+    ["Chevrolet", "Spin"],
+    ["Chevrolet", "Celta"],
+    ["Fiat", "Bravo"],
+    ["Fiat", "147"],
+    ["Fiat", "Uno"],
+    ["Fiat", "Argo"],
 ];
 
 //PT: Foreach para criar um carro para cada especificação
 //EN: Foreach to create a car for each specification
 foreach ($projects as $project){
-    $cars[] = CarFactory::create($project[0], $project[1]);
+    $cars[] = VehiclesFactory::create_car($project[0], $project[1]);
 }
 
 //PT: Carro saindo da fábrica
