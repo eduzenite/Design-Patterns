@@ -1,49 +1,16 @@
-# Factory
-Extraindo um exemplo do mundo real para entender o Factory Method, cheguei nesse exemplo.
+# Autor
+Olá, meu nome é Eduardo Nascimento e sou desenvolvedor PHP desde 2007. Como você deve saber, o profissional da área de TI deve estar em constante evolução e sempre estudando sobre novas tecnologias e técnicas de desenvolvimento consolidadas, eu não sou diferente. Somando o período que estudei dentro de instituçções de ensino, foram 2,5 anos de faculdade de **Sistemas para Inernet pela UniFaat**, 1 ano de **MBA em Engenharia de Software pela FIAP** e 1 ano de **MBA em Inteligencia Artificial pela FIAP**.   
 
-Eu tenho uma superclasse Car que recebe alguns atributos para ser criada. Depois que o objeto for criado, posso recuperá-lo utilizando o método getCar().
+Montei esse projeto para consolidar meus conhecimentos em Design Pattern e ajudar outros desenvolvedores a entenderem melhor sobre o tema.
 
-A mágica do factory acontece na classe VehiclesFactory. Caso eu precise criar vários objetos de uma classe posso usar esse design pattern para facilitar o serviço.
+Se você já desenvolveu algum software (web, mobile ou descktop), você provavelmente já utilizou um dos design patterns listados aqui. Para estudar melhor sobre padrões de projetos você não necessariamente precisa estar em um nível pleno ou sênior, mas é claro que um junior não vai ter tantas sacadas como os dois primeiros, muito por conta da experiência que se desenvolve apenas codando.
 
-[factory-method.php](/patterns/factory-method.php)
-```php
+Se quiser saber mais sobre mim, trocar uma idéia sobre programação ou apenas falar sobre o universo, me adiciona lá no LinkedIn:
+[eduardo-nascimento-zenite](https://www.linkedin.com/in/eduardo-nascimento-zenite/)
 
-class Car{
-    ...
-}
+Ps.: Meu sobrenome não é Zênite, mas essa palavra representa um pouco minha curiosidade sobre o universo.
 
-class VehiclesFactory{
-    public static function create_car($brand, $model){
-        return new Car($brand, $model);
-    }
-}
-```
-## Onde usar?
-* **Cadastro imagens:** Você têm um dropzone no seu projeto que recebe várias imagens de uma única vez. Use o Factory Method para criar os objetos das imagens dinamicamente. 
-* **Processamento CSV:** Seu projeto possui um sistema de importação de dados através de CSV. Use o Factory Method para criar um objeto para cada linha do seu arquivo.
+![alt text](eduardo-nascimento.jpg "Eduardo Nascimento")
 
-## Ainda não identificou os benefícios?
-Em nosso código de exemplo, temos uma classe **Car** e utilizamos a **VehiclesFactory** para criar dinâmicamente nossos carros.
-
-Se precisarmos evoluir nosso código para começar a criar caminhões também, não precisaríamos criar uma nova fábrica, apenas uma classe **Truck** e um novo método **create_truck** dentro da nossa fábrica. O código da evolução ficaria assim:
-
-```php
-
-class Car{
-    ...
-}
-
-class Truck{
-    ...
-}
-
-class VehiclesFactory{
-    public static function create_car($brand, $model){
-        return new Car($brand, $model);
-    }
-    public static function create_truck($brand, $model){
-        return new Car($brand, $model);
-    }
-}
-```
-O nome desse design pattern vem da similaridade com as fábricas. Elas podem fabricar diversos tipos de produtos, basta apenas que você atualize os equipamentos (métodos) para que elas saibam como criar esses novos produtos.
+# Factory Method
+O primeiro e mais conhecido padrão de design é o Factory Method. Criei dois códigos para mostrar como ele funciona e em quais casos utilizá-lo. Também dentro da pasta você consegue ver o README.md que explica como esse padrão de design funciona.
