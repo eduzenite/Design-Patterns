@@ -1,4 +1,6 @@
 <?php
+namespace FactoryMethod\FactoryMethod1;
+
 //PT: Criando o projeto do carro
 //EN: Creating the car project
 class Car{
@@ -10,7 +12,7 @@ class Car{
         $this->model = $model;
     }
 
-    public function getCar(){
+    public function get_vehicle(){
         return [$this->brand, $this->model];
     }
 }
@@ -44,5 +46,5 @@ foreach ($projects as $project){
 
 //PT: Carro saindo da fábrica
 //EN: Car leaving the factory
-print_r($cars[0]->getCar());
-print_r($cars[1]->getCar());
+print_r($cars[0]->get_vehicle());
+print_r($cars[1]->get_vehicle());

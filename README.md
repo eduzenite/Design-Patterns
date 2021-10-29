@@ -15,5 +15,5 @@ Ps.: Meu sobrenome não é Zênite, mas essa palavra representa um pouco minha c
 # Factory Method
 O primeiro e mais conhecido padrão de design é o Factory Method. Criei dois códigos para mostrar como ele funciona e em quais casos utilizá-lo. Também dentro da pasta você consegue ver o _README.md_ que explica como esse padrão de design funciona.
 
-Acesse a posta [factory-method](factory-method) para ver uma explicação desse **design pattern** e códigos de exemplo.
+Acesse a posta [factory-method](FactoryMethod) para ver uma explicação desse **design pattern** e códigos de exemplo.
 

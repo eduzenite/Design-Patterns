@@ -5,7 +5,7 @@ Eu tenho uma superclasse Car que recebe alguns atributos para ser criada. Depois
 
 A mágica do factory acontece na classe VehiclesFactory. Caso eu precise criar vários objetos de uma classe posso usar esse design pattern para facilitar o serviço.
 
-[factory-method-1.php](factory-method-1.php)
+[factory-method-1.php](FactoryMethod1.php)
 
 ```php
 
@@ -34,7 +34,7 @@ Em nosso código de exemplo, temos uma classe **Car** e utilizamos a **VehiclesF
 
 Se precisarmos evoluir nosso código para começar a criar caminhões também, não precisaríamos criar uma nova fábrica, apenas uma classe **Truck** e um novo método **create_truck** dentro da nossa fábrica. O código da evolução ficaria assim:
 
-[factory-method-2.php](factory-method-2.php)
+[factory-method-2.php](FactoryMethod2.php)
 ```php
 
 class Car{

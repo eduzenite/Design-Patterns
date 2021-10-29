@@ -1,5 +1,12 @@
 <?php
-class Car{
+namespace FactoryMethod\FactoryMethod2;
+
+interface VehiclesTemplate
+{
+    public function get_vehicle();
+}
+
+class Car implements VehiclesTemplate{
     private $brand;
     private $model;
 
@@ -8,7 +15,7 @@ class Car{
         $this->model = $model;
     }
 
-    public function get_car(){
+    public function get_vehicle(){
         return [$this->brand, $this->model];
     }
 }
@@ -21,7 +28,7 @@ class Truck{
         $this->model = $model;
     }
 
-    public function get_truck(){
+    public function get_vehicle(){
         return [$this->brand, $this->model];
     }
 }
@@ -50,8 +57,8 @@ foreach ($projects as $project){
     $cars[] = VehiclesFactory::create_car($project[0], $project[1]);
 }
 
-print_r($cars[0]->get_car());
-print_r($cars[1]->get_car());
+print_r($cars[0]->get_vehicle());
+print_r($cars[1]->get_vehicle());
 
 $projects = [
     ["Volvo", "Volvo FH"],
@@ -68,5 +75,5 @@ foreach ($projects as $project){
     $truck[] = VehiclesFactory::create_truck($project[0], $project[1]);
 }
 
-print_r($truck[0]->get_car());
-print_r($truck[1]->get_car());
+print_r($truck[0]->get_vehicle());
+print_r($truck[1]->get_vehicle());
