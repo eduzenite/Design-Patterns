@@ -5,7 +5,7 @@ Eu tenho uma superclasse Car que recebe alguns atributos para ser criada. Depois
 
 A mágica do factory acontece na classe VehiclesFactory. Caso eu precise criar vários objetos de uma classe posso usar esse design pattern para facilitar o serviço.
 
-[factory-method-1.php](FactoryMethod1.php)
+[FactoryMethod1.php](FactoryMethod1.php)
 
 ```php
 
@@ -21,8 +21,8 @@ class VehiclesFactory{
 ```
 
 Para rodar esse código da raíz do projeto, execute:
-```console
-php factory-method/factory-method-1.php
+```shell
+php FactoryMethod/FactoryMethod1.php
 ```
 
 ## Onde usar?
@@ -34,7 +34,7 @@ Em nosso código de exemplo, temos uma classe **Car** e utilizamos a **VehiclesF
 
 Se precisarmos evoluir nosso código para começar a criar caminhões também, não precisaríamos criar uma nova fábrica, apenas uma classe **Truck** e um novo método **create_truck** dentro da nossa fábrica. O código da evolução ficaria assim:
 
-[factory-method-2.php](FactoryMethod2.php)
+[FactoryMethod2.php](FactoryMethod2.php)
 ```php
 
 class Car{
@@ -56,8 +56,8 @@ class VehiclesFactory{
 ```
 
 Para rodar esse código da raíz do projeto, execute:
-```console
-php factory-method/factory-method-2.php
+```shell
+php FactoryMethod/FactoryMethod2.php
 ```
 
 O nome desse design pattern vem da similaridade com as fábricas. Elas podem fabricar diversos tipos de produtos, basta apenas que você atualize os equipamentos (métodos) para que elas saibam como criar esses novos produtos.

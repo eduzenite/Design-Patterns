@@ -38,7 +38,7 @@ class VehiclesFactory{
         return new Car($brand, $model);
     }
     public static function create_truck($brand, $model){
-        return new Car($brand, $model);
+        return new Truck($brand, $model);
     }
 }
 
